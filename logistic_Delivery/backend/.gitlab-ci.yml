@@ -1,0 +1,30 @@
+image: docker:latest
+services:
+  - docker:dind
+
+variables:
+  DOCKER_DRIVER: overlay
+
+stages:
+  - build-production
+  - build-development
+  
+build-production:
+  stage: build-production
+  script:
+    - echo $APP_ENV_BASE64 | base64 -d > .env
+    - docker build -f Dockerfile -t cafrotos/jsf_backend .
+    - docker login -u $DOCKER_USER -p $DOCKER_TOKEN
+    - docker push cafrotos/jsf_backend
+  only: 
+    - master
+
+build-development:
+  stage: build-development
+  script:
+    - echo $APP_ENV_BASE64 | base64 -d > .env
+    - docker build -f Dockerfile -t cafrotos/jsf_backend_dev .
+    - docker login -u $DOCKER_USER -p $DOCKER_TOKEN
+    - docker push cafrotos/jsf_backend_dev
+  only: 
+    - develop

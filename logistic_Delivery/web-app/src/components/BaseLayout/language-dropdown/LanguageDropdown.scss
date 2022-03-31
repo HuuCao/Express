@@ -1,0 +1,19 @@
+.language-dropdown {
+  min-width: 140px;
+
+  .language-item {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.icon-global {
+  font-size: 23px;
+  // margin-right: 25px;
+
+  svg {
+    color: #3e79f7;
+  }
+}

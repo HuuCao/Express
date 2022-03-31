@@ -1,0 +1,17 @@
+.search{
+    .header{
+        font-size: 20px;
+        font-weight: 600;
+        border-bottom: solid 1px;
+        padding-bottom: 10px
+    }
+    &-box{
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    thead[class*="ant-table-thead"] th{
+        cursor: move;
+      }
+}

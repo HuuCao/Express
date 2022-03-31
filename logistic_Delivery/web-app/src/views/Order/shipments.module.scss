@@ -1,0 +1,16 @@
+.otherStackCar{
+    background-color: #d1d1d1 !important;
+
+    &:hover{
+        td{
+            background-color: #d1d1d1 !important;
+        }
+        
+    }
+}
+
+.orders{
+    thead[class*="ant-table-thead"] th{
+        cursor: move;
+      }
+}
