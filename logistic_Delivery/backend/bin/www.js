@@ -116,7 +116,7 @@ async function loadEnviromentBeforListen() {
     readFilePromise(__dirname + "/../configs/refreshTokenPublicKey.pem"),
   ]);
 
-  process.env.HMAC_TOKEN_KEY = "vietsoftware";
+  process.env.HMAC_TOKEN_KEY = "huucao";
   process.env.ACCESS_TOKEN_PRIVATE_KEY = accessTokenPrivateKey;
   process.env.REFRESH_TOKEN_PRIVATE_KEY = refreshTokenPrivateKey;
   process.env.ACCESS_TOKEN_PUBLIC_KEY = accessTokenPublicKey;
